@@ -121,7 +121,7 @@ jobs:
 
             # 5. Jalankan kontainer baru
             echo "⚙️ Menjalankan docker-compose..."
-            docker-compose up -d --remove-orphans
+            docker compose up -d --remove-orphans
 
             # 6. Tunggu sebentar biar DB siap
             echo "⏳ Menunggu container stabil..."
