@@ -55,7 +55,7 @@
 
             @auth
                 <h1 class="text-4xl font-extrabold mb-4">
-                    Selamat Datang,
+                    Selamat Datangg,
                     <span class="text-yellow-200">
                         {{ Auth::user()->nama_lengkap ?? Auth::user()->username }}
                     </span>
