@@ -114,7 +114,12 @@ jobs:
             # Pull image terbaru
             docker pull ghcr.io/madsobirin/proyek_cicd_docker:latest
 
-            # Update container tanpa downtime besar
+            echo "🗑️ Menghapus kontainer lama untuk menghindari bug ContainerConfig..."
+            # Kita hapus dulu kontainernya secara paksa
+            docker rm -f proyek2_ahmadsobirin || true
+
+            echo "🚀 Menjalankan kontainer baru..."
+            # Karena sudah dihapus, dia tidak akan error 'ContainerConfig'
             docker-compose up -d --remove-orphans
 
             # Tunggu container siap
